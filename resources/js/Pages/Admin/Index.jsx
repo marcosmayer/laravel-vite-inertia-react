@@ -1,9 +1,19 @@
 import React from "react";
+import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
+import { Head } from "@inertiajs/inertia-react";
+import { usePage } from "@inertiajs/inertia-react";
 
-export default function Admin() {
+export default function Index({ auth }) {
+	const { posts } = usePage().props;
+
+	const listPosts = posts.map((post) => <li>{post.titulo}</li>);
 	return (
-		<>
-			<h1>Admin</h1>
-		</>
+		<AuthenticatedLayout auth={auth}>
+			<Head title="Admin" />
+
+			<div>
+				<ul>{listPosts}</ul>
+			</div>
+		</AuthenticatedLayout>
 	);
 }

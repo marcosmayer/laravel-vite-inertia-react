@@ -7,5 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use HasFactory;
+	use HasFactory;
+
+	protected $fillable = [
+		'titulo',
+		'slug',
+		'data',
+		'autor',
+		'conteudo',
+	];
+
+	public function user()
+	{
+		return $this->belongsTo(User::class);
+	}
 }

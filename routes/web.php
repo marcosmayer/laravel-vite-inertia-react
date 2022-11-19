@@ -34,6 +34,10 @@ Route::get('/admin', function () {
 	return Inertia::render('Admin/Index');
 })->middleware(['auth', 'verified'])->name('admin');
 
+Route::get('/admin/create', function () {
+	return Inertia::render('Admin/Create');
+})->middleware(['auth', 'verified'])->name('create');
+
 Route::resource('posts', PostController::class)
 	->only(['index', 'store', 'update', 'destroy'])
 	->middleware(['auth', 'verified']);

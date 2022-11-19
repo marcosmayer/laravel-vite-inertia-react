@@ -16,9 +16,7 @@ class PostController extends Controller
 	public function index()
 	{
 		return Inertia::render('Posts/Index', [
-
-			//
-
+			'posts' => Post::all(),
 		]);
 	}
 
@@ -50,7 +48,7 @@ class PostController extends Controller
 
 		$request->user()->posts()->create($validated);
 
-		return redirect(route('list'));
+		return redirect(route('admin'));
 	}
 
 	/**
@@ -87,12 +85,12 @@ class PostController extends Controller
 		$this->authorize('update', $post);
 
 		$validated = $request->validate([
-			'message' => 'required|string|max:255',
+			//
 		]);
 
 		$post->update($validated);
 
-		return redirect(route('posts.index'));
+		return redirect(route('admin.index'));
 	}
 
 	/**
@@ -107,6 +105,6 @@ class PostController extends Controller
 
 		$post->delete();
 
-		return redirect(route('posts.index'));
+		return redirect(route('admin.index'));
 	}
 }
