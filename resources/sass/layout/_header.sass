@@ -1,0 +1,150 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../base' as bas
+@use '../abstracts' as abs
+
+.header
+	width: 100%
+	height: auto
+	background-color: bas.$orange
+	@include abs.dflex(center, center, column)
+
+	&__logo
+		width: 100%
+		@include abs.dflex(center, center, row)
+
+		img
+			height: 80px
+			width: auto
+			margin-top: 10px
+
+			@include abs.xs
+				height: 60px
+
+.nav
+	width: 100%
+	background-color: bas.$medium-gray
+	@include abs.m
+		position: relative
+
+	&__menu
+		width: 100%
+		list-style: none
+		margin: 0
+		padding: 0
+		@include abs.dflex(center, center, row)
+
+		@include abs.m
+			display: none
+
+	&__link
+		@include abs.dflex(center, center, row)
+		flex-grow: 1
+		border-left: 1px solid bas.$light-gray
+		border-right: 1px solid bas.$medium-gray-2
+		margin: 0
+
+		a
+			display: block
+			font-family: bas.$font-3
+			color: bas.$gray
+			font-size: 1.25rem
+			padding: 10px 0
+			text-transform: uppercase
+			text-decoration: none
+			text-align: center
+			width: 100%
+			height: 100%
+			&:hover
+				background-color: bas.$medium-gray
+				background-image: linear-gradient(bas.$light-gray, bas.$medium-gray-2)
+
+			@include abs.l
+				font-size: 1rem
+
+		&--active
+
+			a
+				background-color: bas.$gray
+				color: bas.$light-gray
+				&:hover
+					background-color: bas.$gray
+					background-image: none
+
+.header-mobile
+	display: none
+
+@include abs.m
+	.header
+		display: none
+
+	.header-mobile
+		display: block
+		background-color: bas.$orange
+
+	.topnav
+		display: block
+		overflow: hidden
+		width: 100%
+		height: 50px
+		position: absolute
+
+		a.topnav__link
+			float: left
+			display: block
+			color: bas.$white
+			text-align: left
+			padding: 14px 16px
+			text-decoration: none
+			border-bottom: 1px solid bas.$light-gray
+			font-size: 1rem
+			font-weight: 500
+			text-transform: uppercase
+			background-color: bas.$orange
+
+			&:first-child, &:last-child
+				border: none
+
+			&:not(:first-child)
+				display: none
+
+			&:hover
+				color: bas.$gray
+				background-color: bas.$yellow
+		a.topnav__icon
+			position: absolute
+			right: 0
+			top: 0
+			float: right
+			display: block
+			font-size: 2rem
+			border: none
+			color: bas.$white
+			padding-top: 16px
+			padding-right: 16px
+			@include abs.s
+				padding-top: 12px
+				padding-right: 12px
+				font-size: 1.5rem
+
+		&.responsive
+			position: relative
+			height: auto
+
+			a.topnav__icon
+				position: absolute
+				right: 0
+				top: 0
+				padding-top: 16px
+				padding-right: 16px
+				@include abs.s
+					padding-top: 12px
+					padding-right: 12px
+
+			a.topnav__link
+				float: none
+				display: block
+				text-align: left
+				padding-left: 40px

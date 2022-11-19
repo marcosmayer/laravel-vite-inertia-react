@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+@use '../base' as bas
+@use '../abstracts' as abs
+
+.footer
+	width: 100%
+	height: 80px
+	background-color: bas.$orange
+	@include abs.dflex(center, center, row)
+	font-family: bas.$font-1
+	font-weight: 500
+	font-size: 1.25rem
+	text-align: center
+	color: bas.$white
+
+	@include abs.xs
+		height: 120px
+		flex-direction: column
+
+	&__space
+
+		@include abs.xs
+			display: none
+
+	&__ano
+
+		@include abs.xs
+			margin-bottom: 20px
+			font-weight: 700

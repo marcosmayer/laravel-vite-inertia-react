@@ -1,32 +1,37 @@
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
-export default forwardRef(function TextInput(
-    { type = 'text', name, value, className, autoComplete, required, isFocused, handleChange },
-    ref
-) {
-    const input = ref ? ref : useRef();
+export default function TextInput({
+	type = "text",
+	name,
+	value,
+	className,
+	autoComplete,
+	required,
+	placeholder,
+	isFocused,
+	handleChange,
+}) {
+	const input = useRef();
 
-    useEffect(() => {
-        if (isFocused) {
-            input.current.focus();
-        }
-    }, []);
+	useEffect(() => {
+		if (isFocused) {
+			input.current.focus();
+		}
+	}, []);
 
-    return (
-        <div className="flex flex-col items-start">
-            <input
-                type={type}
-                name={name}
-                value={value}
-                className={
-                    `border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm ` +
-                    className
-                }
-                ref={input}
-                autoComplete={autoComplete}
-                required={required}
-                onChange={(e) => handleChange(e)}
-            />
-        </div>
-    );
-});
+	return (
+		<div className="admin__field">
+			<input
+				type={type}
+				name={name}
+				value={value}
+				placeholder={placeholder}
+				className={`admin__input ` + className}
+				ref={input}
+				autoComplete={autoComplete}
+				required={required}
+				onChange={(e) => handleChange(e)}
+			/>
+		</div>
+	);
+}

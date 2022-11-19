@@ -1,0 +1,159 @@
+@use '../base' as bas
+@use '../abstracts' as abs
+
+.grid
+	display: none
+@supports (display: grid)
+	.grid
+		width: 100%
+		height: 50vw
+		display: grid
+		grid-template-columns: repeat(6, 1fr)
+		grid-template-rows: repeat(3, 1fr)
+		grid-gap: 10px 10px
+		background-color: bas.$gray
+		grid-template-areas: "bot voz voz palavras entrevista entrevista" "bot citacoes citacoes palavras opiniao opiniao" "cxpedia insights insights artigo artigo cinema"
+		color: bas.$white
+		padding: 10px 0
+
+		@include abs.l
+			grid-gap: 5px 5px
+			grid-template-columns: repeat(3, 1fr)
+			grid-template-rows: repeat(6, 1fr)
+
+		@include abs.s
+			grid-template-areas: "bot voz voz" "bot citacoes citacoes" "cxpedia insights insights" "entrevista entrevista palavras" "opiniao opiniao palavras" "cinema artigo artigo"
+			height: 200vw
+
+		@include abs.xs
+			grid-template-areas: "voz voz" "bot palavras" "cxpedia palavras" "entrevista entrevista" "citacoes citacoes" "insights cinema" "opiniao opiniao" "artigo artigo"
+			height: 400vw
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: repeat(8, 1fr)
+
+		&__modulo
+			width: 100%
+			height: 100%
+			background-color: bas.$orange
+			background-position: center center
+			background-repeat: no-repeat
+			background-size: cover
+			display: flex
+
+			&--destaques
+				grid-area: destaques
+				background-image: url(/blog/images/grid-destaques.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-destaques-hover.jpg)
+
+			&--voz
+				grid-area: voz
+				background-image: url(/blog/images/grid-voz.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-voz-hover.jpg)
+
+			&--entrevista
+				grid-area: entrevista
+				background-image: url(/blog/images/grid-entrevista.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-entrevista-hover.jpg)
+
+			&--bot
+				grid-area: bot
+				background-image: url(/blog/images/grid-bot.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-bot-hover.jpg)
+
+			&--palavras
+				grid-area: palavras
+				background-image: url(/blog/images/grid-palavras.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-palavras-hover.jpg)
+
+			&--citacoes
+				grid-area: citacoes
+				background-image: url(/blog/images/grid-citacoes.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-citacoes-hover.jpg)
+
+			&--opiniao
+				grid-area: opiniao
+				background-image: url(/blog/images/grid-opiniao.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-opiniao-hover.jpg)
+
+			&--cxpedia
+				grid-area: cxpedia
+				background-image: url(/blog/images/grid-cxpedia.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-cxpedia-hover.jpg)
+
+			&--insights
+				grid-area: insights
+				background-image: url(/blog/images/grid-insights.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-insights-hover.jpg)
+
+			&--artigo
+				grid-area: artigo
+				background-image: url(/blog/images/grid-artigo.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-artigo-hover.jpg)
+
+			&--cinema
+				grid-area: cinema
+				background-image: url(/blog/images/grid-cinema.jpg)
+				&:hover
+					background-image: url(/blog/images/grid-cinema-hover.jpg)
+
+		&__tag
+			position: absolute
+			padding: 6px 12px
+			background-color: bas.$white
+			color: bas.$medium-gray
+			font-family: bas.$font-1
+			font-size: .8rem
+			font-weight: 500
+			text-transform: uppercase
+			opacity: 0.5
+			margin-top: 5px
+			box-shadow: 2px 2px 3px bas.$black
+
+			@include abs.l
+				font-size: .7rem
+				opacity: .7
+
+		&__link
+			@include abs.dflex(flex-start, center, row)
+			position: relative
+			width: 100%
+			height: 100%
+			text-decoration: none
+			&:hover
+				.grid__text--verde
+					background-color: bas.$orange-60
+				.grid__text--cinza
+					background-color: bas.$gray-60
+
+		&__text
+			width: 100%
+			height: 60px
+			@include abs.dflex(center, center, row)
+			align-self: flex-end
+			@include abs.l
+				padding: 0 5px
+			p
+				font-family: bas.$font-2
+				font-size: 1.2rem
+				text-transform: uppercase
+				color: bas.$white
+
+				@include abs.l
+					font-size: 1rem
+					text-align: center
+
+			&--laranja
+				background-color: bas.$orange-80
+
+			&--cinza
+				background-color: bas.$gray-80

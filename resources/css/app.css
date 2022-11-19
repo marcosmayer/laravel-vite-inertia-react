@@ -1,3 +1,1639 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.bunny.net/css?family=Nunito");
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * * Basic typography style for copy text
+ * */
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: hsl(11deg, 100%, 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+}
+@media only screen and (max-width: 480px) {
+  .footer {
+    height: 120px;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer__space {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .footer__ano {
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  background-color: hsl(11deg, 100%, 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header__logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.header__logo img {
+  height: 80px;
+  width: auto;
+  margin-top: 10px;
+}
+@media only screen and (max-width: 480px) {
+  .header__logo img {
+    height: 60px;
+  }
+}
+
+.nav {
+  width: 100%;
+  background-color: hsl(0deg, 0%, 65%);
+}
+@media only screen and (max-width: 960px) {
+  .nav {
+    position: relative;
+  }
+}
+.nav__menu {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+@media only screen and (max-width: 960px) {
+  .nav__menu {
+    display: none;
+  }
+}
+.nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-grow: 1;
+  border-left: 1px solid hsl(0deg, 0%, 83%);
+  border-right: 1px solid hsl(0deg, 0%, 45%);
+  margin: 0;
+}
+.nav__link a {
+  display: block;
+  font-family: "Unica One", cursive;
+  color: hsl(36deg, 7%, 14%);
+  font-size: 1.25rem;
+  padding: 10px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.nav__link a:hover {
+  background-color: hsl(0deg, 0%, 65%);
+  background-image: linear-gradient(hsl(0deg, 0%, 83%), hsl(0deg, 0%, 45%));
+}
+@media only screen and (max-width: 1200px) {
+  .nav__link a {
+    font-size: 1rem;
+  }
+}
+.nav__link--active a {
+  background-color: hsl(36deg, 7%, 14%);
+  color: hsl(0deg, 0%, 83%);
+}
+.nav__link--active a:hover {
+  background-color: hsl(36deg, 7%, 14%);
+  background-image: none;
+}
+
+.header-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 960px) {
+  .header {
+    display: none;
+  }
+  .header-mobile {
+    display: block;
+    background-color: hsl(11deg, 100%, 60%);
+  }
+  .topnav {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+  }
+  .topnav a.topnav__link {
+    float: left;
+    display: block;
+    color: hsl(0deg, 0%, 100%);
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-bottom: 1px solid hsl(0deg, 0%, 83%);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: hsl(11deg, 100%, 60%);
+  }
+  .topnav a.topnav__link:first-child, .topnav a.topnav__link:last-child {
+    border: none;
+  }
+  .topnav a.topnav__link:not(:first-child) {
+    display: none;
+  }
+  .topnav a.topnav__link:hover {
+    color: hsl(36deg, 7%, 14%);
+    background-color: hsl(44deg, 80%, 62%);
+  }
+  .topnav a.topnav__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    display: block;
+    font-size: 2rem;
+    border: none;
+    color: hsl(0deg, 0%, 100%);
+    padding-top: 16px;
+    padding-right: 16px;
+  }
+}
+@media only screen and (max-width: 960px) and (max-width: 720px) {
+  .topnav a.topnav__icon {
+    padding-top: 12px;
+    padding-right: 12px;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .topnav.responsive {
+    position: relative;
+    height: auto;
+  }
+  .topnav.responsive a.topnav__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 16px;
+    padding-right: 16px;
+  }
+}
+@media only screen and (max-width: 960px) and (max-width: 720px) {
+  .topnav.responsive a.topnav__icon {
+    padding-top: 12px;
+    padding-right: 12px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .topnav.responsive a.topnav__link {
+    float: none;
+    display: block;
+    text-align: left;
+    padding-left: 40px;
+  }
+}
+.grid {
+  display: none;
+}
+
+@supports (display: grid) {
+  .grid {
+    width: 100%;
+    height: 50vw;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px 10px;
+    background-color: hsl(36deg, 7%, 14%);
+    grid-template-areas: "bot voz voz palavras entrevista entrevista" "bot citacoes citacoes palavras opiniao opiniao" "cxpedia insights insights artigo artigo cinema";
+    color: hsl(0deg, 0%, 100%);
+    padding: 10px 0;
+  }
+  @media only screen and (max-width: 1200px) {
+    .grid {
+      grid-gap: 5px 5px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+    }
+  }
+  @media only screen and (max-width: 720px) {
+    .grid {
+      grid-template-areas: "bot voz voz" "bot citacoes citacoes" "cxpedia insights insights" "entrevista entrevista palavras" "opiniao opiniao palavras" "cinema artigo artigo";
+      height: 200vw;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .grid {
+      grid-template-areas: "voz voz" "bot palavras" "cxpedia palavras" "entrevista entrevista" "citacoes citacoes" "insights cinema" "opiniao opiniao" "artigo artigo";
+      height: 400vw;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+    }
+  }
+  .grid__modulo {
+    width: 100%;
+    height: 100%;
+    background-color: hsl(11deg, 100%, 60%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+  }
+  .grid__modulo--destaques {
+    grid-area: destaques;
+    background-image: url(/blog/images/grid-destaques.jpg);
+  }
+  .grid__modulo--destaques:hover {
+    background-image: url(/blog/images/grid-destaques-hover.jpg);
+  }
+  .grid__modulo--voz {
+    grid-area: voz;
+    background-image: url(/blog/images/grid-voz.jpg);
+  }
+  .grid__modulo--voz:hover {
+    background-image: url(/blog/images/grid-voz-hover.jpg);
+  }
+  .grid__modulo--entrevista {
+    grid-area: entrevista;
+    background-image: url(/blog/images/grid-entrevista.jpg);
+  }
+  .grid__modulo--entrevista:hover {
+    background-image: url(/blog/images/grid-entrevista-hover.jpg);
+  }
+  .grid__modulo--bot {
+    grid-area: bot;
+    background-image: url(/blog/images/grid-bot.jpg);
+  }
+  .grid__modulo--bot:hover {
+    background-image: url(/blog/images/grid-bot-hover.jpg);
+  }
+  .grid__modulo--palavras {
+    grid-area: palavras;
+    background-image: url(/blog/images/grid-palavras.jpg);
+  }
+  .grid__modulo--palavras:hover {
+    background-image: url(/blog/images/grid-palavras-hover.jpg);
+  }
+  .grid__modulo--citacoes {
+    grid-area: citacoes;
+    background-image: url(/blog/images/grid-citacoes.jpg);
+  }
+  .grid__modulo--citacoes:hover {
+    background-image: url(/blog/images/grid-citacoes-hover.jpg);
+  }
+  .grid__modulo--opiniao {
+    grid-area: opiniao;
+    background-image: url(/blog/images/grid-opiniao.jpg);
+  }
+  .grid__modulo--opiniao:hover {
+    background-image: url(/blog/images/grid-opiniao-hover.jpg);
+  }
+  .grid__modulo--cxpedia {
+    grid-area: cxpedia;
+    background-image: url(/blog/images/grid-cxpedia.jpg);
+  }
+  .grid__modulo--cxpedia:hover {
+    background-image: url(/blog/images/grid-cxpedia-hover.jpg);
+  }
+  .grid__modulo--insights {
+    grid-area: insights;
+    background-image: url(/blog/images/grid-insights.jpg);
+  }
+  .grid__modulo--insights:hover {
+    background-image: url(/blog/images/grid-insights-hover.jpg);
+  }
+  .grid__modulo--artigo {
+    grid-area: artigo;
+    background-image: url(/blog/images/grid-artigo.jpg);
+  }
+  .grid__modulo--artigo:hover {
+    background-image: url(/blog/images/grid-artigo-hover.jpg);
+  }
+  .grid__modulo--cinema {
+    grid-area: cinema;
+    background-image: url(/blog/images/grid-cinema.jpg);
+  }
+  .grid__modulo--cinema:hover {
+    background-image: url(/blog/images/grid-cinema-hover.jpg);
+  }
+  .grid__tag {
+    position: absolute;
+    padding: 6px 12px;
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(0deg, 0%, 65%);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-top: 5px;
+    box-shadow: 2px 2px 3px hsl(0deg, 0%, 0%);
+  }
+  @media only screen and (max-width: 1200px) {
+    .grid__tag {
+      font-size: 0.7rem;
+      opacity: 0.7;
+    }
+  }
+  .grid__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+  .grid__link:hover .grid__text--verde {
+    background-color: hsla(11deg, 100%, 60%, 0.6);
+  }
+  .grid__link:hover .grid__text--cinza {
+    background-color: hsla(36deg, 7%, 14%, 0.6);
+  }
+  .grid__text {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-self: flex-end;
+  }
+  @media only screen and (max-width: 1200px) {
+    .grid__text {
+      padding: 0 5px;
+    }
+  }
+  .grid__text p {
+    font-family: "BenchNine", sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: hsl(0deg, 0%, 100%);
+  }
+  @media only screen and (max-width: 1200px) {
+    .grid__text p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  .grid__text--laranja {
+    background-color: hsla(11deg, 100%, 60%, 0.8);
+  }
+  .grid__text--cinza {
+    background-color: hsla(36deg, 7%, 14%, 0.8);
+  }
+}
+.conteudo {
+  width: 100%;
+  height: auto;
+  background-color: hsl(42deg, 7%, 28%);
+  padding: 80px 0;
+}
+@media only screen and (max-width: 1200px) {
+  .conteudo {
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .conteudo {
+    padding: 0;
+  }
+}
+.conteudo--incitacoes {
+  background-color: hsl(0deg, 0%, 83%);
+  padding: 0;
+}
+.conteudo__container {
+  width: 1280px;
+  height: auto;
+  background-color: hsl(44deg, 80%, 62%);
+  padding: 80px;
+  box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1200px) {
+  .conteudo__container {
+    width: 880px;
+    padding: 40px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .conteudo__container {
+    width: 100%;
+    padding: 40px 20px;
+  }
+}
+.conteudo__container--incitacoes {
+  background-color: transparent;
+  padding: 0;
+  width: 100%;
+  box-shadow: none;
+}
+.conteudo__conteudo {
+  width: 100%;
+  height: auto;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 25px 50px -10px rgb(0, 0, 0);
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 4px;
+  color: hsl(0deg, 0%, 65%);
+  text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .conteudo__conteudo {
+    padding: 40px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .conteudo__conteudo {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .conteudo__conteudo {
+    width: 100%;
+  }
+}
+.conteudo__conteudo--incitacoes {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  text-align: center;
+}
+.conteudo__post {
+  width: 100%;
+  height: auto;
+}
+.conteudo__titulo h1 {
+  font-family: "Unica One", cursive;
+  font-size: 3rem;
+  line-height: 3rem;
+  color: hsl(11deg, 100%, 60%);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  .conteudo__titulo h1 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+.conteudo__info {
+  width: 100%;
+  height: 40px;
+  clear: both;
+}
+.conteudo__data, .conteudo__autor {
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.8rem;
+  color: hsl(0deg, 0%, 65%);
+  margin-bottom: 16px;
+  padding: 5px 12px;
+  border: 1px solid hsl(0deg, 0%, 83%);
+  font-weight: 400;
+}
+@media only screen and (max-width: 480px) {
+  .conteudo__data, .conteudo__autor {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+}
+.conteudo__data {
+  left: 0;
+  float: left;
+}
+.conteudo__autor {
+  right: 0;
+  float: right;
+}
+.conteudo__imagem {
+  width: 100%;
+  height: auto;
+}
+.conteudo__imagem img {
+  width: 100%;
+  height: auto;
+}
+.conteudo__audio-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+@media only screen and (max-width: 720px) {
+  .conteudo__audio-social {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+}
+.conteudo__texto {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: hsl(0deg, 0%, 45%);
+  margin: 40px 0;
+  text-align: justify;
+}
+.conteudo__texto h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: hsl(36deg, 7%, 14%);
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media only screen and (max-width: 1200px) {
+  .conteudo__texto h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.conteudo__texto h2 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: hsl(0deg, 0%, 45%);
+  font-weight: 700;
+  margin: 20px 0;
+}
+@media only screen and (max-width: 1200px) {
+  .conteudo__texto h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.conteudo__texto h3 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.75rem;
+  color: hsl(209deg, 74%, 30%);
+  font-weight: 700;
+  margin: 20px 0;
+}
+@media only screen and (max-width: 1200px) {
+  .conteudo__texto h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.conteudo__texto p {
+  margin-bottom: 20px;
+}
+.conteudo__texto--intro {
+  font-family: "Arapey", serif;
+  color: hsl(36deg, 7%, 14%);
+  padding-bottom: 20px;
+  font-style: italic;
+}
+.conteudo__texto--pergunta {
+  font-weight: 700;
+}
+.conteudo__texto--citacao {
+  font-family: "Arapey", serif;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  color: #c73509;
+  padding: 60px;
+  text-align: center;
+}
+@media only screen and (max-width: 720px) {
+  .conteudo__texto--citacao {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    padding: 30px;
+  }
+}
+.conteudo__tags {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin: 30px auto;
+}
+.conteudo__tag {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  display: inline-block;
+  background-color: hsl(0deg, 0%, 45%);
+  padding: 4px 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  -khtml-border-radius: 16px;
+}
+.conteudo__voltar {
+  display: block;
+  width: 160px;
+  height: auto;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-align: center;
+  color: hsl(36deg, 7%, 14%);
+  margin: 80px auto 40px;
+  background-color: hsl(44deg, 80%, 62%);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.conteudo__voltar:hover {
+  color: hsl(44deg, 80%, 62%);
+  background-color: hsl(36deg, 7%, 14%);
+}
+.conteudo__definicao {
+  font-family: "Arapey", serif;
+  color: hsl(0deg, 0%, 65%);
+  text-transform: lowercase;
+  font-size: 4rem;
+  font-weight: 400;
+  padding-top: 40px;
+}
+@media only screen and (max-width: 1200px) {
+  .conteudo__definicao {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .conteudo__definicao {
+    font-size: 2.5rem;
+  }
+}
+
+.audio-player {
+  width: 50%;
+}
+@media only screen and (max-width: 720px) {
+  .audio-player {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .audio-player audio {
+    width: 100%;
+  }
+}
+
+.audio-player--hidden {
+  display: none;
+}
+
+.sharing-buttons {
+  width: 50%;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  margin: 24px auto;
+  align-items: center;
+}
+@media only screen and (max-width: 720px) {
+  .sharing-buttons {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+mark {
+  all: unset;
+  background-image: linear-gradient(hsl(44deg, 80%, 62%), hsl(44deg, 80%, 62%));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 100%;
+  -webkit-animation: highlight 900ms 1 ease-out;
+          animation: highlight 900ms 1 ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes highlight {
+  to {
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes highlight {
+  to {
+    background-size: 100% 100%;
+  }
+}
+.email {
+  width: 100%;
+  box-shadow: 0 10px 15px hsla(0deg, 0%, 0%, 0.2);
+  border-radius: 8px;
+  margin-bottom: 100px;
+}
+.email__title {
+  height: 50px;
+  line-height: 50px;
+  background-color: hsl(209deg, 74%, 30%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  padding-left: 40px;
+  border-radius: 8px 8px 0 0;
+}
+.email__header {
+  height: 50px;
+  margin: 0 25px;
+  border-bottom: 2px solid hsl(0deg, 0%, 83%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: hsl(0deg, 0%, 65%);
+  font-size: 1.5rem;
+}
+@media only screen and (max-width: 720px) {
+  .email__header {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .email__header {
+    height: 80px;
+    margin: 0 20px;
+    flex-direction: column;
+  }
+}
+.email__campo {
+  width: 25%;
+  text-align: right;
+  padding-right: 20px;
+}
+@media only screen and (max-width: 480px) {
+  .email__campo {
+    width: 100%;
+    height: 40px;
+    padding-right: 0;
+    padding-left: 20px;
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+.email__info {
+  width: 75%;
+  text-align: left;
+  padding-left: 20px;
+}
+@media only screen and (max-width: 720px) {
+  .email__info {
+    font-weight: 500;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .email__info {
+    width: 100%;
+    height: 40px;
+    padding-right: 0;
+    padding-left: 20px;
+    text-align: left;
+  }
+}
+.email__message {
+  color: hsl(0deg, 0%, 65%);
+  font-size: 1.5rem;
+  padding: 40px;
+}
+@media only screen and (max-width: 480px) {
+  .email__message {
+    padding: 30px;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    text-align: left;
+  }
+}
+.email__send {
+  height: 50px;
+  line-height: 50px;
+  background-color: hsl(209deg, 74%, 30%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+}
+
+.pesquisa {
+  width: 70%;
+  text-align: center;
+  font-weight: 700;
+  margin: 30px auto;
+  padding: 40px;
+  border: 4px dashed hsl(209deg, 74%, 30%);
+}
+@media only screen and (max-width: 720px) {
+  .pesquisa {
+    width: 85%;
+  }
+}
+.pesquisa__fonte {
+  text-align: right;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.citacao {
+  position: relative;
+  width: 920px;
+  height: 500px;
+  box-shadow: 20px 20px 40px 10px hsla(0deg, 0%, 0%, 0.2);
+  margin: 100px 0 100px 0;
+}
+@media only screen and (max-width: 1200px) {
+  .citacao {
+    width: 820px;
+    height: 420px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .citacao {
+    width: 90%;
+    height: 200vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.citacao--grita {
+  background-color: hsl(26deg, 3%, 41%);
+}
+.citacao__imagem {
+  position: relative;
+  width: 460px;
+  height: 460px;
+  left: 45%;
+  top: -20px;
+  box-shadow: 20px 20px 40px 10px hsla(0deg, 0%, 0%, 0.2);
+}
+@media only screen and (max-width: 1200px) {
+  .citacao__imagem {
+    width: 400px;
+    height: 400px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .citacao__imagem {
+    width: 100vw;
+    height: auto;
+    left: initial;
+    top: 20px;
+  }
+}
+.citacao__imagem img {
+  width: 100%;
+  height: auto;
+}
+.citacao__citacao {
+  position: relative;
+  width: 540px;
+  height: 400px;
+  background-color: hsla(0deg, 0%, 100%, 0.9);
+  box-shadow: 20px 20px 40px 10px hsla(0deg, 0%, 0%, 0.2);
+  right: 55%;
+  top: 10px;
+  padding: 40px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1200px) {
+  .citacao__citacao {
+    width: 440px;
+    height: 340px;
+    top: 20px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .citacao__citacao {
+    width: 80%;
+    height: auto;
+    right: initial;
+    top: -20px;
+    padding: 30px 40px;
+  }
+}
+.citacao__linha {
+  width: 100%;
+  height: 1px;
+  background-color: hsl(15deg, 45%, 68%);
+}
+@media only screen and (max-width: 1200px) {
+  .citacao__linha {
+    display: none;
+  }
+}
+.citacao__frase {
+  font-family: "Arapey", serif;
+  color: hsl(0deg, 0%, 65%);
+  font-size: 2rem;
+  margin: 40px 0;
+  line-height: 2.5rem;
+}
+.citacao__autor {
+  width: 100%;
+  color: hsl(15deg, 45%, 68%);
+  text-align: right;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+@media only screen and (max-width: 720px) {
+  .citacao__autor {
+    text-align: center;
+    font-weight: 500;
+  }
+}
+.citacao .sharing-buttons--incitacoes {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 24px auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.lista {
+  width: 100%;
+}
+.lista__secao {
+  text-align: left;
+  font-weight: 700;
+  color: hsl(36deg, 7%, 14%);
+  font-size: 2rem;
+}
+.lista__linha {
+  width: 100%;
+  height: 2px;
+  background-color: hsl(0deg, 0%, 83%);
+  margin: 20px auto 30px;
+}
+.lista__subtitulo {
+  text-align: left;
+  font-size: 1.25rem;
+  color: hsl(0deg, 0%, 65%);
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+.lista__link {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 45%);
+}
+.lista__link:hover {
+  opacity: 0.7;
+}
+.lista__item {
+  margin: 20px auto;
+  font-size: 1.25rem;
+  margin-bottom: 100px;
+}
+.lista__info {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.lista__info--noimage {
+  height: 50px;
+}
+@media only screen and (max-width: 1200px) {
+  .lista__info {
+    height: 75px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .lista__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+  }
+}
+.lista__imagem {
+  width: 22%;
+  height: 100%;
+}
+.lista__imagem img {
+  height: 100px;
+  display: block;
+}
+@media only screen and (max-width: 1200px) {
+  .lista__imagem img {
+    height: 75px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .lista__imagem img {
+    width: 100%;
+    height: auto;
+  }
+}
+.lista__imagem--menor {
+  width: 15%;
+}
+.lista__imagem--noimage {
+  width: 0;
+  display: none;
+}
+@media only screen and (max-width: 720px) {
+  .lista__imagem {
+    width: 100%;
+    height: auto;
+  }
+}
+.lista__titulo {
+  width: 63%;
+  height: 100%;
+  text-align: left;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding-right: 30px;
+}
+.lista__titulo--maior {
+  width: 70%;
+}
+.lista__titulo--noimage {
+  width: 85%;
+}
+@media only screen and (max-width: 720px) {
+  .lista__titulo--noimage {
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .lista__titulo {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+.lista__data {
+  width: 15%;
+  height: 100%;
+  line-height: 100px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+@media only screen and (max-width: 720px) {
+  .lista__data {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    line-height: initial;
+    font-weight: 500;
+    font-size: 0.8rem;
+    justify-content: flex-end;
+  }
+}
+.lista__resumo {
+  text-align: left;
+  margin-top: 20px;
+}
+.lista__resumo--no {
+  display: none;
+}
+
+.editorial {
+  width: 100%;
+  height: auto;
+  background-color: hsl(36deg, 7%, 14%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.editorial__image {
+  width: 100vw;
+  height: auto;
+}
+.editorial__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.editorial__text {
+  text-align: justify;
+  color: hsl(0deg, 0%, 65%);
+  width: 80vw;
+  margin: 50px auto;
+}
+.editorial__text h2 {
+  color: hsl(11deg, 100%, 60%);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.editorial__text p {
+  margin-bottom: 1.25rem;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.editorial__text h3 {
+  color: hsl(11deg, 100%, 60%);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.sobre {
+  width: 100%;
+  height: auto;
+  display: table;
+  background-color: hsl(44deg, 80%, 62%);
+}
+@media only screen and (max-width: 1200px) {
+  .sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.sobre__imagem {
+  display: table-cell;
+  width: 40%;
+  height: 100%;
+  background-image: url(../../images/sobre-nos.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-width: 1200px) {
+  .sobre__imagem {
+    display: block;
+    width: 100%;
+    height: 100vw;
+    order: 2;
+  }
+}
+.sobre__texto {
+  display: table-cell;
+  width: 60%;
+  padding: 50px;
+}
+@media only screen and (max-width: 1200px) {
+  .sobre__texto {
+    display: block;
+    width: 100%;
+    order: 1;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sobre__texto {
+    padding: 30px;
+  }
+}
+.sobre__texto h2 {
+  color: hsl(36deg, 7%, 14%);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.sobre__texto p {
+  margin-bottom: 1.8rem;
+  line-height: 2.8rem;
+  font-family: "Ubuntu", sans-serif;
+  color: hsl(36deg, 7%, 14%);
+  font-size: 1.25rem;
+  text-align: left;
+}
+@media only screen and (max-width: 480px) {
+  .sobre__texto p {
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+.sobre__texto--destaque {
+  background-color: hsl(36deg, 7%, 14%);
+  color: hsl(11deg, 100%, 60%);
+  font-weight: 700;
+  padding: 3px 7px;
+}
+
+.admin {
+  width: 100%;
+}
+.admin__area {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+.admin__titulo {
+  font-size: 2rem;
+  background-color: hsl(0deg, 0%, 83%);
+  text-align: center;
+  font-weight: 400;
+  padding: 20px 0;
+}
+.admin__nav {
+  margin-top: 40px;
+}
+.admin__button {
+  background-color: hsl(15deg, 45%, 68%);
+  width: 200px;
+  height: 80px;
+  color: hsl(0deg, 0%, 100%);
+}
+.admin__button--send {
+  background-color: hsl(11deg, 100%, 60%);
+  width: 400px;
+  height: 60px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.admin__button--send:hover {
+  opacity: 0.7;
+}
+.admin__field {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 40px;
+}
+.admin__input {
+  width: 100%;
+  height: 60px;
+  padding-left: 20px;
+  font-size: 1.25rem;
+  border: 1px solid hsl(0deg, 0%, 83%);
+}/*# sourceMappingURL=app.css.map */

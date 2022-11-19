@@ -1,0 +1,491 @@
+@use '../base' as bas
+@use '../abstracts' as abs
+
+.conteudo
+	width: 100%
+	height: auto
+	background-color: bas.$warm-gray
+	padding: 80px 0
+	@include abs.l
+		padding: 40px 0
+
+	@include abs.s
+		padding: 0
+
+	&--incitacoes
+		background-color: bas.$light-gray
+		padding: 0
+
+	&__container
+		width: 1280px
+		height: auto
+		background-color: bas.$yellow
+		padding: 80px
+		-webkit-box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 0.5)
+		-moz-box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 0.5)
+		box-shadow: 0px 0px 75px 0px rgba(0, 0, 0, 0.5)
+		margin: 0 auto
+
+		@include abs.l
+			width: 880px
+			padding: 40px
+
+		@include abs.s
+			width: 100%
+			padding: 40px 20px
+
+		&--incitacoes
+			background-color: transparent
+			padding: 0
+			width: 100%
+			-webkit-box-shadow: none
+			-moz-box-shadow: none
+			box-shadow: none
+
+	&__conteudo
+		width: 100%
+		height: auto
+		background-color: bas.$white
+		-webkit-box-shadow: 0px 25px 50px -10px rgba(0, 0, 0, 1)
+		-moz-box-shadow: 0px 25px 50px -10px rgba(0, 0, 0, 1)
+		box-shadow: 0px 25px 50px -10px rgba(0, 0, 0, 1)
+		padding: 80px
+		@include abs.dflex(center, center, column)
+		border-radius: 4px
+		color: bas.$medium-gray
+		text-align: center
+
+		@include abs.l
+			padding: 40px
+
+		@include abs.s
+			padding: 30px
+
+		@include abs.xs
+			width: 100%
+
+		&--incitacoes
+			width: 100%
+			height: auto
+			background-color: transparent
+			-webkit-box-shadow: none
+			-moz-box-shadow: none
+			box-shadow: none
+			padding: 0
+			text-align: center
+
+	&__post
+		width: 100%
+		height: auto
+
+	&__titulo
+
+		h1
+			font-family: bas.$font-3
+			font-size: 3rem
+			line-height: 3rem
+			color: bas.$orange
+			text-transform: uppercase
+			text-decoration: none
+			text-align: left
+			@include abs.l
+				font-size: 2rem
+				line-height: 2rem
+
+	&__info
+		width: 100%
+		height: 40px
+		clear: both
+
+	&__data, &__autor
+		display: inline-block
+		font-family: bas.$font-1
+		font-size: .8rem
+		color: bas.$medium-gray
+		margin-bottom: 16px
+		padding: 5px 12px
+		border: 1px solid bas.$light-gray
+		font-weight: 400
+
+		@include abs.xs
+			font-size: .7rem
+			padding: 5px 8px
+
+	&__data
+		left: 0
+		float: left
+
+	&__autor
+		right: 0
+		float: right
+
+	&__imagem
+		width: 100%
+		height: auto
+
+		img
+			width: 100%
+			height: auto
+
+	&__audio-social
+		@include abs.dflex(center, center, row)
+
+		@include abs.s
+			flex-direction: column
+			margin-top: 20px
+
+	&__texto
+		font-family: bas.$font-1
+		font-size: 1.5rem
+		line-height: 2rem
+		color: bas.$medium-gray-2
+		margin: 40px 0
+		text-align: justify
+
+		h1
+			font-family: bas.$font-1
+			font-size: 2.5rem
+			line-height: 3rem
+			color: bas.$dark-gray
+			margin: 20px 0
+			text-transform: uppercase
+			font-weight: 700
+			@include abs.l
+				font-size: 1.5rem
+				line-height: 2rem
+
+		h2
+			font-family: bas.$font-1
+			font-size: 2rem
+			line-height: 2.5rem
+			color: bas.$medium-gray-2
+			font-weight: 700
+			margin: 20px 0
+			@include abs.l
+				font-size: 1.5rem
+				line-height: 2rem
+
+		h3
+			font-family: bas.$font-1
+			font-size: 1.75rem
+			color: bas.$blue
+			font-weight: 700
+			margin: 20px 0
+			@include abs.l
+				font-size: 1.5rem
+				line-height: 2rem
+
+		p
+			margin-bottom: 20px
+
+		&--intro
+			font-family: bas.$font-4
+			color: bas.$dark-gray
+			padding-bottom: 20px
+			font-style: italic
+
+		&--pergunta
+			font-weight: 700
+
+		&--citacao
+			font-family: bas.$font-4
+			font-size: 3rem
+			line-height: 3.5rem
+			color: #c73509
+			padding: 60px
+			text-align: center
+
+			@include abs.s
+				font-size: 2.5rem
+				line-height: 2.5rem
+				padding: 30px
+
+
+	&__tags
+		width: 100%
+		height: auto
+		text-align: center
+		margin: 30px auto
+
+	&__tag
+		font-family: bas.$font-1
+		font-size: 1rem
+		color: #ffffff
+		display: inline-block
+		background-color: bas.$medium-gray-2
+		padding: 4px 20px
+		margin-right: 10px
+		margin-bottom: 10px
+		-moz-border-radius: 16px
+		-webkit-border-radius: 16px
+		border-radius: 16px
+		-khtml-border-radius: 16px
+
+	&__voltar
+		display: block
+		width: 160px
+		height: auto
+		font-family: bas.$font-1
+		font-weight: 700
+		font-size: 1.25rem
+		text-align: center
+		color: bas.$dark-gray
+		margin: 80px auto 40px
+		background-color: bas.$yellow
+		padding: 10px 20px
+		text-decoration: none
+		border-radius: 8px
+		text-transform: uppercase
+		&:hover
+			color: bas.$yellow
+			background-color: bas.$gray
+
+	&__definicao
+		font-family: bas.$font-4
+		color: bas.$medium-gray
+		text-transform: lowercase
+		font-size: 4rem
+		font-weight: 400
+		padding-top: 40px
+
+		@include abs.l
+			font-size: 3rem
+
+		@include abs.s
+			font-size: 2.5rem
+
+.audio-player
+	width: 50%
+
+	@include abs.s
+		width: 100%
+
+	audio
+		@include abs.xs
+			width: 100%
+
+.audio-player--hidden
+	display: none
+
+.sharing-buttons
+	width: 50%
+	height: 60px
+	@include abs.dflex(flex-end, center, row)
+	margin: 24px auto
+	align-items: center
+
+	@include abs.s
+		margin-top: 20px
+		width: 100%
+		justify-content: center
+
+mark
+	all: unset
+	background-image: linear-gradient(bas.$yellow, bas.$yellow)
+	background-position: 0 100%
+	background-repeat: no-repeat
+	background-size: 0 100%
+	animation: highlight 900ms 1 ease-out
+	animation-fill-mode: forwards
+	animation-play-state: paused
+
+@keyframes highlight
+		to
+			background-size: 100% 100%
+
+.email
+	width: 100%
+	box-shadow: 0 10px 15px bas.$shadow
+	border-radius: 8px
+	margin-bottom: 100px
+
+	&__title
+		height: 50px
+		line-height: 50px
+		background-color: bas.$blue-2
+		color: bas.$white
+		font-family: bas.$font-1
+		font-size: 1.5rem
+		padding-left: 40px
+		border-radius: 8px 8px 0 0
+
+	&__header
+		height: 50px
+		margin: 0 25px
+		border-bottom: 2px solid bas.$light-gray
+		@include abs.dflex(center, center, row)
+		color: bas.$medium-gray
+		font-size: 1.5rem
+
+		@include abs.s
+			font-size: 1.1rem
+
+		@include abs.xs
+			height: 80px
+			margin: 0 20px
+			flex-direction: column
+
+	&__campo
+		width: 25%
+		text-align: right
+		padding-right: 20px
+
+		@include abs.xs
+			width: 100%
+			height: 40px
+			padding-right: 0
+			padding-left: 20px
+			font-size: 1rem
+			text-align: left
+
+	&__info
+		width: 75%
+		text-align: left
+		padding-left: 20px
+
+		@include abs.s
+			font-weight: 500
+
+		@include abs.xs
+			width: 100%
+			height: 40px
+			padding-right: 0
+			padding-left: 20px
+			text-align: left
+
+	&__message
+		color: bas.$medium-gray
+		font-size: 1.5rem
+		padding: 40px
+
+		@include abs.xs
+			padding: 30px
+			font-size: 1.25rem
+			line-height: 1.25rem
+			text-align: left
+
+	&__send
+		height: 50px
+		line-height: 50px
+		background-color: bas.$blue-2
+		color: bas.$white
+		font-family: bas.$font-1
+		font-size: 1.5rem
+		border-radius: 0 0 8px 8px
+		text-align: center
+
+.pesquisa
+	width: 70%
+	text-align: center
+	font-weight: 700
+	margin: 30px auto
+	padding: 40px
+	border: 4px dashed bas.$blue-2
+
+	@include abs.s
+		width: 85%
+
+	&__fonte
+		text-align: right
+		font-style: italic
+		font-size: 1rem
+
+.citacao
+	position: relative
+	width: 920px
+	height: 500px
+	box-shadow: 20px 20px 40px 10px bas.$shadow
+	margin: 100px 0 100px 0
+
+	@include abs.l
+		width: 820px
+		height: 420px
+
+	@include abs.s
+		width: 90%
+		height: 200vw
+		@include abs.dflex(center, center, column)
+
+	&--grita
+		background-color: hsl(26, 3%, 41%)
+
+	&__imagem
+		position: relative
+		width: 460px
+		height: 460px
+		left: 45%
+		top: -20px
+		box-shadow: 20px 20px 40px 10px bas.$shadow
+
+		@include abs.l
+			width: 400px
+			height: 400px
+
+		@include abs.s
+			width: 100vw
+			height: auto
+			left: initial
+			top: 20px
+
+		img
+			width: 100%
+			height: auto
+
+	&__citacao
+		position: relative
+		width: 540px
+		height: 400px
+		background-color: bas.$white-90
+		box-shadow: 20px 20px 40px 10px bas.$shadow
+		right: 55%
+		top: 10px
+		padding: 40px 70px
+		@include abs.dflex(center, center, column)
+
+		@include abs.l
+			width: 440px
+			height: 340px
+			top: 20px
+
+		@include abs.s
+			width: 80%
+			height: auto
+			right: initial
+			top: -20px
+			padding: 30px 40px
+
+	&__linha
+		width: 100%
+		height: 1px
+		background-color: bas.$salmon
+
+		@include abs.l
+			display: none
+
+	&__frase
+		font-family: bas.$font-4
+		color: bas.$medium-gray
+		font-size: 2rem
+		margin: 40px 0
+		line-height: 2.5rem
+
+	&__autor
+		width: 100%
+		color: bas.$salmon
+		text-align: right
+		font-family: bas.$font-1
+		font-weight: 100
+		font-size: 1rem
+		margin-top: 20px
+
+		@include abs.s
+			text-align: center
+			font-weight: 500
+
+	.sharing-buttons--incitacoes
+		width: 100%
+		height: 60px
+		@include abs.dflex(center, center, row)
+		margin: 24px auto
+		text-align: center
+		margin: 0 auto

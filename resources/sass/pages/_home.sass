@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+@use '../base' as bas
+@use '../abstracts' as abs
+
+.editorial
+	width: 100%
+	height: auto
+	background-color: bas.$gray
+	@include abs.dflex(flex-start, center, column)
+
+	&__image
+		width: 100vw
+		height: auto
+
+		img
+			width: 100%
+			height: auto
+			display: block
+
+	&__text
+		text-align: justify
+		color: bas.$medium-gray
+		width: 80vw
+		margin: 50px auto
+
+		h2
+			color: bas.$orange
+			font-family: bas.$font-1
+			font-size: 2rem
+			margin-bottom: 2rem
+			text-transform: uppercase
+
+		p
+			margin-bottom: 1.25rem
+			font-family: bas.$font-1
+			font-size: 1.5rem
+			line-height: 2rem
+
+		h3
+			color: bas.$orange
+			font-family: bas.$font-1
+			font-size: 1.75rem
+			margin-bottom: 2rem
+			margin-top: 3rem
+
+.sobre
+	width: 100%
+	height: auto
+	display: table
+	background-color: bas.$yellow
+
+	@include abs.l
+		@include abs.dflex(center, center, column)
+
+	&__imagem
+		display: table-cell
+		width: 40%
+		height: 100%
+		background-image: url(../../images/sobre-nos.jpg)
+		background-position: center center
+		background-repeat: no-repeat
+		background-size: cover
+
+		@include abs.l
+			display: block
+			width: 100%
+			height: 100vw
+			order: 2
+
+	&__texto
+		display: table-cell
+		width: 60%
+		padding: 50px
+
+		@include abs.l
+			display: block
+			width: 100%
+			order: 1
+
+		@include abs.xs
+			padding: 30px
+
+		h2
+			color: bas.$gray
+			font-family: bas.$font-1
+			font-size: 1.5rem
+			margin-bottom: 2rem
+			text-transform: uppercase
+
+		p
+			margin-bottom: 1.8rem
+			line-height: 2.8rem
+			font-family: bas.$font-1
+			color: bas.$dark-gray
+			font-size: 1.25rem
+			text-align: left
+
+			@include abs.xs
+				line-height: 2rem
+				margin-bottom: 1rem
+
+		&--destaque
+			background-color: bas.$gray
+			color: bas.$orange
+			font-weight: 700
+			padding: 3px 7px

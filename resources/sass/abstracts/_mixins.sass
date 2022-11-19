@@ -1,0 +1,36 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin dflex($flexjc, $flexai, $flexd)
+	display: -webkit-box
+	display: -moz-box
+	display: -ms-flexbox
+	display: -webkit-flex
+	display: flex
+	-webkit-justify-content: $flexjc
+	justify-content: $flexjc
+	align-items: $flexai
+	-webkit-flex-direction: $flexd
+	-ms-flex-direction: $flexd
+	flex-direction: $flexd
+
+@mixin xl
+	@media only screen and (min-width : 1536px)
+		@content
+
+@mixin l
+	@media only screen and (max-width : 1200px)
+		@content
+
+@mixin m
+	@media only screen and (max-width : 960px)
+		@content
+
+@mixin s
+	@media only screen and (max-width : 720px)
+		@content
+
+@mixin xs
+	@media only screen and (max-width : 480px)
+		@content
