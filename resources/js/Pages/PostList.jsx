@@ -1,13 +1,10 @@
 import React from "react";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import MainNav from "@/Components/Home/MainNav";
-import HomeGrid from "@/Components/Home/HomeGrid";
-import Editorial from "@/Components/Home/Editorial";
-import Sobre from "@/Components/Home/Sobre";
 import Footer from "@/Components/Footer";
 import { Head } from "@inertiajs/inertia-react";
 
-export default function Home(props) {
+export default function PostList(props) {
 	return (
 		<AuthenticatedLayout
 			auth={props.auth}
@@ -23,9 +20,6 @@ export default function Home(props) {
 				/>
 			</Head>
 			<MainNav />
-			<HomeGrid />
-			<Editorial />
-			<Sobre />
 			<Footer />
 		</AuthenticatedLayout>
 	);

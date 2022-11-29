@@ -647,82 +647,75 @@ html {
     background-size: cover;
     display: flex;
   }
-  .grid__modulo--destaques {
-    grid-area: destaques;
-    background-image: url(/blog/images/grid-destaques.jpg);
-  }
-  .grid__modulo--destaques:hover {
-    background-image: url(/blog/images/grid-destaques-hover.jpg);
-  }
   .grid__modulo--voz {
     grid-area: voz;
-    background-image: url(/blog/images/grid-voz.jpg);
+    background-image: url(/public/img/grid-voz.jpg);
   }
   .grid__modulo--voz:hover {
-    background-image: url(/blog/images/grid-voz-hover.jpg);
+    background-image: url(/public/img/grid-voz-hover.jpg);
   }
   .grid__modulo--entrevista {
     grid-area: entrevista;
-    background-image: url(/blog/images/grid-entrevista.jpg);
+    background-image: url(/public/img/grid-entrevista.jpg);
   }
   .grid__modulo--entrevista:hover {
-    background-image: url(/blog/images/grid-entrevista-hover.jpg);
+    background-image: url(/public/img/grid-entrevista-hover.jpg);
   }
   .grid__modulo--bot {
     grid-area: bot;
-    background-image: url(/blog/images/grid-bot.jpg);
+    background-image: url(/public/img/grid-bot.jpg);
   }
   .grid__modulo--bot:hover {
-    background-image: url(/blog/images/grid-bot-hover.jpg);
+    background-image: url(/public/img/grid-bot-hover.jpg);
   }
   .grid__modulo--palavras {
     grid-area: palavras;
-    background-image: url(/blog/images/grid-palavras.jpg);
+    background-image: url(/public/img/grid-palavras.jpg);
   }
   .grid__modulo--palavras:hover {
-    background-image: url(/blog/images/grid-palavras-hover.jpg);
+    background-image: url(/public/img/grid-palavras-hover.jpg);
   }
   .grid__modulo--citacoes {
     grid-area: citacoes;
-    background-image: url(/blog/images/grid-citacoes.jpg);
+    background-image: url(/public/img/grid-citacoes.jpg);
   }
   .grid__modulo--citacoes:hover {
-    background-image: url(/blog/images/grid-citacoes-hover.jpg);
+    background-image: url(/public/img/grid-citacoes-hover.jpg);
   }
   .grid__modulo--opiniao {
     grid-area: opiniao;
-    background-image: url(/blog/images/grid-opiniao.jpg);
+    background-image: url(/public/img/grid-opiniao.jpg);
   }
   .grid__modulo--opiniao:hover {
-    background-image: url(/blog/images/grid-opiniao-hover.jpg);
+    background-image: url(/public/img/grid-opiniao-hover.jpg);
   }
   .grid__modulo--cxpedia {
     grid-area: cxpedia;
-    background-image: url(/blog/images/grid-cxpedia.jpg);
+    background-image: url(/public/img/grid-cxpedia.jpg);
   }
   .grid__modulo--cxpedia:hover {
-    background-image: url(/blog/images/grid-cxpedia-hover.jpg);
+    background-image: url(/public/img/grid-cxpedia-hover.jpg);
   }
   .grid__modulo--insights {
     grid-area: insights;
-    background-image: url(/blog/images/grid-insights.jpg);
+    background-image: url(/public/img/grid-insights.jpg);
   }
   .grid__modulo--insights:hover {
-    background-image: url(/blog/images/grid-insights-hover.jpg);
+    background-image: url(/public/img/grid-insights-hover.jpg);
   }
   .grid__modulo--artigo {
     grid-area: artigo;
-    background-image: url(/blog/images/grid-artigo.jpg);
+    background-image: url(/public/img/grid-artigo.jpg);
   }
   .grid__modulo--artigo:hover {
-    background-image: url(/blog/images/grid-artigo-hover.jpg);
+    background-image: url(/public/img/grid-artigo-hover.jpg);
   }
   .grid__modulo--cinema {
     grid-area: cinema;
-    background-image: url(/blog/images/grid-cinema.jpg);
+    background-image: url(/public/img/grid-cinema.jpg);
   }
   .grid__modulo--cinema:hover {
-    background-image: url(/blog/images/grid-cinema-hover.jpg);
+    background-image: url(/public/img/grid-cinema-hover.jpg);
   }
   .grid__tag {
     position: absolute;
@@ -1593,7 +1586,7 @@ mark {
   display: table-cell;
   width: 40%;
   height: 100%;
-  background-image: url(../../images/sobre-nos.jpg);
+  background-image: url(/public/img/sobre-nos.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
