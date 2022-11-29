@@ -22,6 +22,63 @@
 
 			@include abs.xs
 				height: 60px
+	
+	&__nav
+		width: 100%
+		background-color: hsl(0deg, 0%, 65%)
+
+		@include abs.m
+			position: relative
+	
+	&__menu
+		width: 100%
+		list-style: none
+		margin: 0
+		padding: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: row
+
+		@include abs.m
+			display: none
+	
+	&__link
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: row
+		flex-grow: 1
+		border-left: 1px solid hsl(0deg, 0%, 83%)
+		border-right: 1px solid hsl(0deg, 0%, 45%)
+		margin: 0
+	
+	&__ilink
+		display: block
+		font-family: "Unica One", cursive
+		color: hsl(36deg, 7%, 14%)
+		font-size: 1.25rem
+		padding: 10px 0
+		text-transform: uppercase
+		text-decoration: none
+		text-align: center
+		width: 100%
+		height: 100%
+		
+		&:hover
+			background-color: hsl(0deg, 0%, 65%)
+			background-image: linear-gradient(hsl(0deg, 0%, 83%), hsl(0deg, 0%, 45%))
+
+			@include abs.l
+				font-size: 1rem
+		
+		&--active
+			background-color: hsl(36deg, 7%, 14%)
+			color: hsl(0deg, 0%, 83%)
+		
+			&:hover
+				background-color: hsl(36deg, 7%, 14%)
+				background-image: none
 
 .nav
 	width: 100%
@@ -91,7 +148,7 @@
 		height: 50px
 		position: absolute
 
-		a.topnav__link
+		&__link
 			float: left
 			display: block
 			color: bas.$white

@@ -383,6 +383,69 @@ html {
     height: 60px;
   }
 }
+.header__nav {
+  width: 100%;
+  background-color: hsl(0deg, 0%, 65%);
+}
+@media only screen and (max-width: 960px) {
+  .header__nav {
+    position: relative;
+  }
+}
+.header__menu {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+@media only screen and (max-width: 960px) {
+  .header__menu {
+    display: none;
+  }
+}
+.header__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-grow: 1;
+  border-left: 1px solid hsl(0deg, 0%, 83%);
+  border-right: 1px solid hsl(0deg, 0%, 45%);
+  margin: 0;
+}
+.header__ilink {
+  display: block;
+  font-family: "Unica One", cursive;
+  color: hsl(36deg, 7%, 14%);
+  font-size: 1.25rem;
+  padding: 10px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.header__ilink:hover {
+  background-color: hsl(0deg, 0%, 65%);
+  background-image: linear-gradient(hsl(0deg, 0%, 83%), hsl(0deg, 0%, 45%));
+}
+@media only screen and (max-width: 1200px) {
+  .header__ilink:hover {
+    font-size: 1rem;
+  }
+}
+.header__ilink--active {
+  background-color: hsl(36deg, 7%, 14%);
+  color: hsl(0deg, 0%, 83%);
+}
+.header__ilink--active:hover {
+  background-color: hsl(36deg, 7%, 14%);
+  background-image: none;
+}
 
 .nav {
   width: 100%;
@@ -467,7 +530,7 @@ html {
     height: 50px;
     position: absolute;
   }
-  .topnav a.topnav__link {
+  .topnav__link {
     float: left;
     display: block;
     color: hsl(0deg, 0%, 100%);
@@ -480,13 +543,13 @@ html {
     text-transform: uppercase;
     background-color: hsl(11deg, 100%, 60%);
   }
-  .topnav a.topnav__link:first-child, .topnav a.topnav__link:last-child {
+  .topnav__link:first-child, .topnav__link:last-child {
     border: none;
   }
-  .topnav a.topnav__link:not(:first-child) {
+  .topnav__link:not(:first-child) {
     display: none;
   }
-  .topnav a.topnav__link:hover {
+  .topnav__link:hover {
     color: hsl(36deg, 7%, 14%);
     background-color: hsl(44deg, 80%, 62%);
   }
