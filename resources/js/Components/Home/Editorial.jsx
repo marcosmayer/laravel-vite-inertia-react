@@ -5,11 +5,11 @@ import bottom from "/public/img/editorial-bottom.jpg";
 export default function Editorial() {
 	return (
 		<div>
-			<div class="editorial">
-				<div class="editorial__image editorial__image--top">
+			<div className="editorial">
+				<div className="editorial__image editorial__image--top">
 					<img src={top} alt="Editorial" />
 				</div>
-				<div class="editorial__text">
+				<div className="editorial__text">
 					<h2>Editorial</h2>
 					<p>Chegamos!</p>
 					<p>
@@ -107,7 +107,7 @@ export default function Editorial() {
 						pense Fora da Caixa!
 					</p>
 				</div>
-				<div class="editorial__image editorial__image--bottom">
+				<div className="editorial__image editorial__image--bottom">
 					<img src={bottom} alt="Editorial" />
 				</div>
 			</div>

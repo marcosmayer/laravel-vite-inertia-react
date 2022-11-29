@@ -3,12 +3,12 @@ import React from "react";
 export default function Footer() {
 	return (
 		<div>
-			<div class="footer">
-				<span class="footer__ano">
+			<div className="footer">
+				<span className="footer__ano">
 					&copy; {new Date().getFullYear()} Connvert
 				</span>
-				<span class="footer__space">&nbsp;-&nbsp;</span>
-				<span class="footer__direitos">
+				<span className="footer__space">&nbsp;-&nbsp;</span>
+				<span className="footer__direitos">
 					Todos os direitos reservados
 				</span>
 			</div>

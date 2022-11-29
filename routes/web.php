@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,9 @@ Route::get('/admin/create', function () {
 })->middleware(['auth', 'verified'])->name('create');
 
 Route::resource('posts', PostController::class)
+	->only(['index']);
+
+Route::resource('blogposts', BlogController::class)
 	->only(['index', 'store', 'update', 'destroy'])
 	->middleware(['auth', 'verified']);
 

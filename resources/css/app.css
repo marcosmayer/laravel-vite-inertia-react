@@ -1402,10 +1402,19 @@ mark {
 .lista__link:hover {
   opacity: 0.7;
 }
+.lista__area {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .lista__item {
-  margin: 20px auto;
   font-size: 1.25rem;
   margin-bottom: 100px;
+  width: 30%;
+  height: 400px;
+  border: 1px solid #ddd;
 }
 .lista__info {
   width: 100%;
